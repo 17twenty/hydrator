@@ -1,0 +1,11 @@
+{{/* https://golang.org/pkg/text/template/ */}}
+{
+    "family_name": "{{ .family_name | titleCase }}",
+    "first_name": "{{ .first_name | titleCase }}",
+    "dob" : "{{ .dob | formatAsDate}}",
+    "age": {{ .age }},
+{{if .sausage -}}
+    "sausage": "{{ .sausage }}",
+{{- end}}
+    "total_spend" : "{{ .spend | formatAsDollars }}"
+}
